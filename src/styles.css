@@ -1,0 +1,355 @@
+/* styles.css */
+
+/* Add styles for the whole application */
+/* General body styling */
+body {
+  margin: 0; /* Remove default margin */
+  font-family: sans-serif; /* Optional: Set a base font for the page */
+}
+
+/* Add styles for the rest of the content */
+.App {
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #151a4a;
+  background-image: url("https://transparenttextures.com/patterns/classy-fabric.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+/* Add styles for the heading elements (h1 and h2) */
+h1,
+h2,
+h3 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+  font-family: "Playfair Display", sans-serif; /* Use Honk for the heading elements */
+}
+
+/* Apply the effect on page load */
+.App.loaded h1,
+.App.loaded h2,
+.App.loaded h3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add styles for the navigation bar */
+nav {
+  background: linear-gradient(to bottom, #000, transparent 80%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between; /* Ensures items are spaced out between the logo and the links */
+  /* align-items: center; */
+  /* padding: 0 15rem; Padding on both sides */
+  width: 100%;
+  /* height: 70px; Fixed height */
+  background: transparent; /* Makes the navbar transparent */
+  border: none; /* Ensures there's no border */
+  box-shadow: none; /* Removes any shadow effects */
+}
+
+/* Add styles for the navigation links */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: flex-end; /* Aligns links to the right */
+}
+
+nav li {
+  margin-left: 15px; /* Increased margin between links */
+  background: none;
+  border: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  background: none; /* Remove any background */
+  border: none; /* Remove any border */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+nav a:hover,
+nav a:focus {
+  color: hsl(235, 18%, 63%); /* Change color on hover for better visibility */
+  background: none; /* Ensure no background change on hover */
+}
+
+/* Add styles for the logo (rounded image) */
+.logo {
+  border-radius: 50%; /* Make the image rounded */
+  width: 50px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+  margin-left: 1rem; /* Add padding to the left */
+  margin-top: 0.3rem;
+}
+
+/* Styles for the logo with absolute positioning */
+.logo-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px; /* Gives some space around the logo */
+}
+
+.navbarButtons {
+  display: flex; /* Aligns items horizontally */
+  /* flex-direction: column; */
+  justify-content: flex-end; /* Aligns the buttons to the right */
+  list-style: none; /* Removes default list styling */
+  /* margin: 0; Removes default margin */
+  padding: 0; /* Removes default padding */
+  width: 50px;
+  /* height: 20rem; */
+  margin-left: 1rem;
+  margin-top: 6rem;
+}
+
+.navbarButtons li {
+  margin-left: 20px; /* Space between each item */
+}
+
+.navbarButtons li a {
+  display: block; /* Makes the link encompass the full area of its content */
+}
+
+/* .navbarButtons li a:hover {
+  color: #000;
+} */
+
+/* Style adjustments for other navbar elements to ensure they do not overlap the logo */
+.navbarButtons img {
+  display: block; /* Removes any extra space below the image */
+  margin: 0; /* Removes any default margin */
+  width: 40px; /* Adjusts width */
+  height: auto; /* Maintains aspect ratio */
+}
+
+/* Styles for images within the links to prevent any unintended background changes */
+.navbarButtons a img {
+  transition: transform 0.3s ease; /* Smooth transformation effect */
+}
+
+.navbarButtons a:hover img,
+.navbarButtons a:focus img {
+  transform: scale(1.1); /* Slightly enlarge images on hover */
+  background: none; /* Make sure no background is added */
+}
+
+/* Resetting any additional inherited styles that might affect background */
+.navbarButtons a {
+  background: none !important; /* Override any other background styles */
+  box-shadow: none; /* Remove any shadow effects */
+}
+
+/* Specific style for GitHub button if it needs extra spacing */
+/* .githubButton {
+  margin-left: 1rem;
+} */
+
+/* Image inside navbar buttons */
+.githubButton img {
+  width: 30px;
+  /* Adjust size as needed */
+  height: auto;
+  border-radius: 20%;
+  /* Adds rounded corners to the image */
+}
+
+.upworkLogo img {
+  width: 30px;
+  height: 35px;
+}
+
+/* Add styles for the content */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Initially hide the content */
+  transition: opacity 0.5s ease; /* Add a smooth transition for opacity */
+  padding-bottom: 100px; /* Adjust to ensure content is not covered by the fixed section */
+}
+
+/* Apply styles when the content is visible */
+.content.visible {
+  opacity: 1; /* Show the content when the visible class is applied */
+  margin-top: 3rem;
+}
+
+/* Add styles for the time in the bottom left corner */
+.time {
+  position: fixed;
+  bottom: 1.2rem;
+  left: 38px;
+  font-size: 18px;
+  color: white;
+}
+
+.react-clock {
+  background-color: #fff; /* Set the background color to milky white */
+  border: 0px solid #ccc; /* Add a border for a defined boundary */
+  border-radius: 50%; /* Make it round */
+}
+
+.analog-clock {
+  position: fixed;
+  bottom: 3.4rem;
+  left: 47px;
+  margin-right: 20px; /* Add some margin to the right */
+}
+
+/* Add styles for the weather component */
+.weather {
+  position: fixed;
+  bottom: 1rem; /* Adjusted position */
+  left: 10px; /* Adjusted position */
+  display: flex; /* Use flexbox to display items horizontally */
+  align-items: center; /* Align items vertically in the center */
+  margin-right: 20px; /* Add some margin to the right for separation */
+  padding: 10px; /* Adjusted padding */
+  padding-top: 10px;
+  padding-bottom: 75px;
+  background-color: #252525; /* Darker background color */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 12px; /* Adjusted font size */
+  color: white; /* Text color */
+}
+
+.weather h3,
+.weather p {
+  margin: 0; /* Remove default margin for h3 and p */
+}
+
+.weather i {
+  margin-right: 0px; /* Add margin to the right of the icon for separation */
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Add styles for the sample text */
+.sample-text {
+  opacity: 0; /* Initially hide the sample text */
+  transform: translateY(20px); /* Move the text down */
+  transition:
+    opacity 0.5s ease,
+    transform 1s ease; /* Add transitions */
+}
+
+/* Apply styles when the sample text is visible */
+.sample-text.visible {
+  opacity: 1; /* Show the sample text when the visible class is applied */
+  transform: translateY(0); /* Move the text to its original position */
+}
+
+/* Add styles for the sample text */
+.scroll-down {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.scroll-down-text {
+  color: white;
+  font-size: 20px;
+}
+
+.scroll-arrow {
+  position: fixed;
+  bottom: 0px;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000; /* Ensure the arrow stays above the text */
+}
+
+.scroll-arrow img {
+  background-color: transparent; /* Ensure the background of the image is transparent */
+  width: 50px; /* Set the width of the image */
+  height: auto; /* Automatically adjust the height to maintain aspect ratio */
+  animation: bounce 2s infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scrollable-container {
+  background-color: #fff; /* Adjust the background color as needed */
+  max-height: 400px; /* Set a fixed height */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: auto; /* Show vertical scrollbar if content overflows */
+  padding: 20px;
+  margin-top: 20px; /* Adjust spacing around the container */
+  border: 1px solid #ccc; /* Optional: adds a border around the container */
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: cyan;
+  position: absolute;
+  z-index: 1;
+  /* Gradient for a spherical effect */
+  background-image: radial-gradient(white, cyan 60%, darkcyan);
+  /* Box shadow for depth */
+  box-shadow:
+    0 0 8px rgba(0, 0, 0, 0.5),
+    inset 0 0 5px rgba(255, 255, 255, 0.5),
+    inset 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Transition for smooth bouncing */
+  transition: transform 0.2s;
+}
+
+/* @keyframes spin {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+} */
+
+/* .video-background iframe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Prevents interaction with the video */
+/* z-index: -1; */
+/* } */
+
+/* .viewProjectsButton {
+  align-self: left;
+} */

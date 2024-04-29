@@ -1,0 +1,48 @@
+.gradient-background {
+  background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
+.profile-img {
+  border-radius: 50%;
+  height: 100px;
+}
+
+.back-button {
+  position: fixed; /* Use fixed to keep it visible even when scrolling */
+  top: 20px;
+  left: 20px;
+  z-index: 1050; /* Higher than most other items */
+}
+
+.back-button a {
+  display: block;
+  padding: 8px 16px;
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.back-button a:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
