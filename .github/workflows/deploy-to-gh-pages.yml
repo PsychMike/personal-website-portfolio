@@ -3,10 +3,10 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Set this to the branch containing your source code
+      - main  # Trigger on pushes to the main branch
   pull_request:
     branches:
-      - main
+      - main  # Trigger on pull requests to the main branch
 
 permissions:
   contents: write
@@ -14,17 +14,21 @@ permissions:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Specifies the runner
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2  # Checks out the repository under $GITHUB_WORKSPACE, so your workflow can access it
+
       - uses: actions/setup-node@v2
         with:
-          node-version: '14'  # Specify the Node.js version based on your project requirements
-      - run: npm install
-      - run: npm run build  # Ensure this script correctly builds your project
+          node-version: '14'  # Sets up Node.js version 14
+
+      - run: npm install  # Install dependencies
+
+      - run: npm run build  # Builds the project, make sure this script points to your actual build command
+
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4  # Uses version 4 of the GitHub Pages deploy action
         with:
-          branch: gh-pages  # This is the target branch for deployment
-          folder: build  # This should match the output folder of your build script
-          token: ${{ secrets.GITHUB_TOKEN }}  # Uses a built-in token for GitHub Actions
+          branch: gh-pages  # Branch to deploy to, make sure this branch is set up in your repository
+          folder: build  # The folder where your build script outputs files to, adjust if different
+          token: ${{ secrets.GITHUB_TOKEN }}  # Uses the GitHub token to authorize deployment
