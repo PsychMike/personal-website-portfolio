@@ -23,4 +23,4 @@ jobs:
         with:
           branch: gh-pages  # This is the target branch for deployment
           folder: build  # This should match the output folder of your build script
-          token: ${{ secrets.GITHUB_TOKEN }}  # Uses a built-in token for GitHub Actions
+          # token: ${{ secrets.GITHUB_TOKEN }}  # Uses a built-in token for GitHub Actions
