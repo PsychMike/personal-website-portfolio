@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A React project",
   "main": "src/index.tsx",
+  "homepage": "https://PsychMike.github.io/personal-website-portfolio/",
   "dependencies": {
     "aos": "^2.3.4",
     "axios": "^1.6.7",
