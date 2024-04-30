@@ -1,0 +1,158 @@
+/* General Resets */
+body,
+h1,
+h2,
+form,
+input,
+button,
+textarea {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif; /* Clean, readable font */
+  background-color: #f4f4f4; /* Light grey background for less strain on eyes */
+  color: #333; /* Dark grey text for readability */
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  background-color: #0077cc; /* A nice shade of blue */
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline;
+  margin-left: 10px;
+}
+
+header nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+main {
+  max-width: 800px; /* Optimal line length for reading */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+h1,
+h2 {
+  color: #0077cc; /* Echoing the header color for design consistency */
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block; /* Makes the label take the full width */
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%; /* Ensures it fills the container */
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd; /* Light border for subtle delineation */
+  border-radius: 4px;
+}
+
+button {
+  background-color: #0077cc; /* Matching the header */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #005fa3; /* Darker blue on hover for interaction feedback */
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header,
+  main,
+  footer {
+    padding: 10px;
+  }
+
+  header nav ul li {
+    display: block;
+    margin-top: 10px;
+  }
+
+  main {
+    width: 90%; /* More width in smaller screens */
+  }
+}
+
+.jersey-15-regular {
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: regular;
+}
+
+.bloggerGreeting {
+  color: white;
+  z-index: 1000;
+  font-size: 5rem;
+  font-weight: 200;
+  font-family: "Jersey 15", sans-serif;
+}
+
+.bloggerRegister {
+  color: white;
+  z-index: 1000;
+  font-size: 3rem;
+  font-weight: 200;
+  font-family: "Jersey 15", sans-serif;
+}
+
+.back-button {
+  position: fixed; /* Use fixed to keep it visible even when scrolling */
+  bottom: 20px;
+  left: 20px;
+  z-index: 1050; /* Higher than most other items */
+  border-color: black;
+}
+
+.back-button a {
+  display: block;
+  padding: 8px 16px;
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.back-button a:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
