@@ -331,6 +331,26 @@ html {
   transition: transform 0.2s;
 }
 
+@media (max-width: 768px) {
+  .weather {
+    visibility: hidden;
+  }
+  .time {
+    z-index: 3000;
+    font-size: small;
+  }
+  .analog-clock {
+    z-index: 3000;
+    position: fixed;
+    bottom: 3rem;
+    left: 2.4rem;
+    margin-right: 20px; /* Add some margin to the right */
+  }
+  .myName {
+    margin-top: 2.3rem;
+  }
+}
+
 /* @keyframes spin {
   from {
     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);

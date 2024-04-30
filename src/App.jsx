@@ -29,7 +29,7 @@ const App = () => {
       <div className={`App ${loaded ? "loaded" : ""}`}>
         <NavBar />
         <div className="content visible">
-          <h1>Michael Ryan Hess</h1>
+          <h1 className="myName">Michael Ryan Hess</h1>
           <h2>Web Development Portfolio</h2>
           <Weather />
           <div className="time">{currentTime}</div>
