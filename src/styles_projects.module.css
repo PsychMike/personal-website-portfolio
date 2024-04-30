@@ -145,6 +145,16 @@ ul li a:focus {
   transform: translateX(-10rem); /* Move to default position */
 }
 
+.bloggerText {
+  transform: translateX(5rem);
+  margin-left: 0.5rem;
+}
+
+.projectButton:hover .bloggerText {
+  opacity: 1;
+  transform: translateX(-11.2rem);
+}
+
 .projectButton:hover .buttonTitle {
   color: rgb(235, 237, 226);
 }
@@ -201,8 +211,30 @@ img {
     hsl(240, 79%, 47%)
   );
 }
-.simonButton img {
+.simonButton img,
+.bloggerButton img {
   border-radius: 50%;
+}
+
+.bloggerButton {
+  background: linear-gradient(
+    300deg,
+    rgb(103, 103, 239),
+    hwb(240 28% 13%),
+    hwb(240 20% 15%),
+    hsl(240, 79%, 47%)
+  );
+}
+
+.bloggerButton:hover,
+.bloggerButton:focus {
+  background: linear-gradient(
+    300deg,
+    hsl(240, 79%, 47%),
+    hwb(240 28% 13%),
+    hwb(240 20% 15%),
+    rgb(103, 103, 239)
+  );
 }
 
 .backButton {

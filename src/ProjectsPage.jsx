@@ -46,6 +46,22 @@ const ProjectsPage = () => {
             </span>
           </a>
         </li>
+        <li>
+          <a
+            href="blogger.html"
+            target="_blank"
+            className={`${styles.projectButton} ${styles.bloggerButton}`} // Use general and specific classes
+          >
+            <img
+              src="https://th.bing.com/th/id/R.871e64298c23c6552492148fb0d74109?rik=h%2bLwFa3tRH0exg&riu=http%3a%2f%2fwww.e-rain.com%2fwp-content%2fuploads%2f2014%2f07%2fBlog-Creation-Blogging-Writing.jpg&ehk=Xm38iLEZZe8P1YyWxz%2bepuemcosboAC6V7DwVR8xHv8%3d&risl=&pid=ImgRaw&r=0"
+              alt="Blogger Logo"
+            />
+            <span className={styles.buttonTitle}>Blogger</span>
+            <span className={`${styles.descriptionText} ${styles.bloggerText}`}>
+              Create an account & post your thoughts!
+            </span>
+          </a>
+        </li>
       </ul>
     </div>
   );

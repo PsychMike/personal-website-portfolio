@@ -16,7 +16,7 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
-  background-color: #151a4a;
+  background-color: rgb(46, 134, 193);
   background-image: url("https://transparenttextures.com/patterns/classy-fabric.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
