@@ -382,3 +382,50 @@ body {
     transform: none;
   }
 }
+
+@media (max-width: 768px) {
+  ul li {
+    width: 90%;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items for better visual alignment */
+  }
+
+  .projectButton {
+    padding: 0.5rem; /* Reduce padding */
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+    max-width: 100%; /* Button takes full width available */
+    flex-direction: column; /* Ensure items inside the button are stacked vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Align items horizontally at the center */
+  }
+
+  .projectButton img {
+    width: 5rem; /* Maintain image size */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transformation for hover effects */
+    margin-bottom: 1rem;
+  }
+
+  .projectButton:hover img {
+    transform: scale(1.1); /* Enlarge image slightly on hover */
+  }
+
+  .projectButton .buttonTitle {
+    order: -1;
+    text-align: center; /* Center text horizontally */
+    width: 100%; /* Ensure title spans the full width of the button */
+    display: block; /* Display as block to ensure it occupies its own line */
+    margin-top: 1rem; /* Space between title and image */
+    transition: transform 0.3s ease; /* Smooth transformation for hover effects */
+    font-size: large;
+  }
+
+  .projectButton:hover .buttonTitle {
+    transform: scale(1.1); /* Slightly enlarge the title on hover */
+  }
+
+  .descriptionText {
+    display: none; /* Hide description text on mobile */
+  }
+}
