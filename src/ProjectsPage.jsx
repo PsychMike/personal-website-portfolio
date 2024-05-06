@@ -16,8 +16,8 @@ const ProjectsPage = () => {
       <ul>
         <li>
           <a
-            href="dog_site.html"
-            target="_blank"
+            href="tindog.html"
+            target="_self"
             className={`${styles.projectButton} ${styles.tindogButton}`} // Use general and specific classes
           >
             <img
@@ -33,7 +33,7 @@ const ProjectsPage = () => {
         <li>
           <a
             href="simon_game.html"
-            target="_blank"
+            target="_self"
             className={`${styles.projectButton} ${styles.simonButton}`} // Use general and specific classes
           >
             <img
@@ -49,7 +49,7 @@ const ProjectsPage = () => {
         <li>
           <a
             href="blogger.html"
-            target="_blank"
+            target="_self"
             className={`${styles.projectButton} ${styles.bloggerButton}`} // Use general and specific classes
           >
             <img
