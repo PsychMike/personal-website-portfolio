@@ -1,6 +1,6 @@
 // Importing React and CSS module
 import React from "react";
-import styles from "./styles_projects.module.css"; // Ensure the path is correct and it's named correctly in your project
+import styles from "/public/styles/styles_projects.module.css"; // Ensure the path is correct and it's named correctly in your project
 
 const ProjectsPage = () => {
   return (
